@@ -18,7 +18,7 @@ html {
   }
 
   @include respond-to('xsmall') {
-    font-size: 31.25%; // 6px(0.3125 X 16px)
+    font-size: 50%; // 8px(0.5 X 16px)
   }
 
   @include respond-to('xlarge') {
@@ -32,4 +32,8 @@ html {
 
 body {
   box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
 }
