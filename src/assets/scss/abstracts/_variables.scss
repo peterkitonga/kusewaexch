@@ -1,0 +1,58 @@
+/**
+ * => Header & Footer
+ *
+ * footer: 40px
+ * header: 60px
+ *
+ * => Media Queries(1em = 16px)
+ *
+ * 0 - 600px:       PHONE(xsmall)
+ * 600 - 900px:     TABLET PORTRAIT(small)
+ * 900 - 1200px:    TABLET LANDSCAPE(medium)
+ * 1200 - 1800px:   NORMAL LAPTOP(large)
+ * 1800 - INFINITY: BIG DESKTOP(xlarge)
+ *
+*/
+$font-default-size: 1.6rem;
+$font-primary: "Montserrat", sans-serif;
+$font-display: "Rubik", sans-serif;
+
+$color-default: #f2f4f4;
+$color-primary: #5a8dee;
+$color-success: #39da8a;
+$color-danger: #ff5b5c;
+$color-info: #00cfdd;
+
+$color-text-dark: #2c3e50;
+$color-text-default: #5e6877;
+$color-text-primary: $color-primary;
+$color-text-success: $color-success;
+$color-text-danger: $color-danger;
+$color-text-info: $color-info;
+
+$shadow-dark: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-dark, 0.12);
+$shadow-default: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-default, 0.12);
+$shadow-primary: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-primary, 0.12);
+$shadow-success: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-success, 0.12);
+$shadow-danger: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-danger, 0.12);
+$shadow-info: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-info, 0.12);
+
+$gutter-col: 2rem;
+$gutter-row: 2rem;
+
+$columns: 12;
+
+$breakpoints: (
+  "xsmall": (
+    max-width: 37.5em,
+  ),
+  "small": (
+    max-width: 56.25em,
+  ),
+  "medium": (
+    max-width: 75em,
+  ),
+  "xlarge": (
+    min-width: 112.5em,
+  ),
+);

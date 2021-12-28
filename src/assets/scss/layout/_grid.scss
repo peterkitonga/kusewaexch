@@ -1,0 +1,23 @@
+.container {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 114rem;
+
+  @include respond-to('medium') {
+    max-width: 100%;
+    padding: 0 4rem;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-rows: minmax(min-content, 1fr);
+  grid-template-columns: [container-start] repeat(12, [col-start] 1fr [col-end]) [container-end];
+
+  &--gutter {
+    row-gap: $gutter-row;
+    column-gap: $gutter-col;
+  }
+
+  @include grid-columns;
+}

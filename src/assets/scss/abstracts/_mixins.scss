@@ -1,0 +1,40 @@
+@mixin grid-columns {
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      grid-column: span $i;
+    }
+
+    .col-md-#{$i} {
+      @include respond-to('medium') {
+        grid-column: span $i;
+      }
+    }
+
+    .col-sm-#{$i} {
+      @include respond-to('small') {
+        grid-column: span $i;
+      }
+    }
+
+    .col-xs-#{$i} {
+      @include respond-to('xsmall') {
+        grid-column: span $i;
+      }
+    }
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
