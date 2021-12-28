@@ -53,6 +53,10 @@ Start the server
   npm run serve
 ```
 
+## Run with Docker
+
+To run with docker simply run the command `docker-compose up -d`. This will create a container by the name `kxch` exposing a port `8080`. Visit `http://127.0.0.1:8080` to view the app running.
+
 ## Deployment(production mode)
 
 Install dependencies first
