@@ -13,29 +13,32 @@
  * 1800 - INFINITY: BIG DESKTOP(xlarge)
  *
 */
+$font-small-size: 1.2rem;
+$font-medium-size: 1.4rem;
 $font-default-size: 1.6rem;
-$font-primary: "Montserrat", sans-serif;
-$font-display: "Rubik", sans-serif;
+$font-primary: "Mulish", sans-serif;
+$font-display: 'Lobster Two', cursive;
 
-$color-default: #f2f4f4;
-$color-primary: #5a8dee;
-$color-success: #39da8a;
-$color-danger: #ff5b5c;
-$color-info: #00cfdd;
+$color-base: #fefefe;
+$color-muted: #aea4a4;
+$color-default: #464646;
+$color-primary: #bd1717;
+$color-secondary: #0dbda2;
+$color-gray4pc: darken($color-base, 4%);
+$color-primary-10pc: lighten($color-primary, 10%);
+$color-primary-20pc: lighten($color-primary, 20%);
+$color-primary-30pc: lighten($color-primary, 30%);
+$color-primary-40pc: lighten($color-primary, 40%);
+$color-primary-50pc: lighten($color-primary, 50%);
+$color-secondary-10pc: lighten($color-secondary, 10%);
+$color-secondary-20pc: lighten($color-secondary, 20%);
+$color-secondary-30pc: lighten($color-secondary, 30%);
+$color-secondary-40pc: lighten($color-secondary, 40%);
+$color-secondary-50pc: lighten($color-secondary, 50%);
 
-$color-text-dark: #2c3e50;
-$color-text-default: #5e6877;
-$color-text-primary: $color-primary;
-$color-text-success: $color-success;
-$color-text-danger: $color-danger;
-$color-text-info: $color-info;
-
-$shadow-dark: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-dark, 0.12);
-$shadow-default: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-default, 0.12);
-$shadow-primary: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-primary, 0.12);
-$shadow-success: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-success, 0.12);
-$shadow-danger: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-danger, 0.12);
-$shadow-info: -0.8rem 1.2rem 1.8rem 0 rgba($color-text-info, 0.12);
+$shadow-default: -0.2rem 0.6rem 1rem 0 rgba($color-default, 0.16);
+$shadow-primary: -0.2rem 0.6rem 1rem 0 rgba($color-primary, 0.16);
+$shadow-secondary: -0.2rem 0.6rem 1rem 0 rgba($color-secondary, 0.16);
 
 $gutter-col: 2rem;
 $gutter-row: 2rem;
