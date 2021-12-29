@@ -185,7 +185,7 @@ export default class Home extends Vue {
   };
 
   public onSignupSubmit(): void {
-    this.$router.push({ name: "app.login" });
+    this.$router.push({ name: "app.signin" });
   }
 }
 </script>

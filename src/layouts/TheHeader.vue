@@ -3,7 +3,7 @@
     <base-navbar>
       <template v-slot:auth>
         <li class="navbar__list-item">
-          <router-link :to="{ name: 'app.login' }" class="navbar__link"
+          <router-link :to="{ name: 'app.signin' }" class="navbar__link"
             >Sign In</router-link
           >
         </li>
