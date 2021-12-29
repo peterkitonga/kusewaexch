@@ -68,3 +68,48 @@
     }
   }
 }
+
+.hme-features {
+  @include respond-to('small') {
+    padding-top: 10rem;
+  }
+
+  &__figure {
+    background-color: $color-secondary-50pc;
+    height: 50rem;
+    
+    @include respond-to('small') {
+      clip-path: circle(50%);
+      height: 30rem;
+      width: 30rem;
+      margin: auto;
+    }
+  }
+
+  &__figure-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__content {
+    width: 65%;
+    margin: auto;
+
+    @include respond-to('small') {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__content-heading {
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+
+  &__content-text {
+    font-size: $font-default-size;
+    line-height: 1.5;
+  }
+}
