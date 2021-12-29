@@ -8,7 +8,7 @@ import AppFooter from "../layouts/TheFooter.vue";
 
 // App Views
 import Home from "../views/Home.vue";
-import Login from "../views/Login.vue";
+import SignIn from "../views/SignIn.vue";
 import Dashboard from "../views/Dashboard.vue";
 
 Vue.use(VueRouter);
@@ -28,10 +28,10 @@ const routes: Array<RouteConfig> = [
         },
       },
       {
-        path: "/login",
-        name: "app.login",
+        path: "/signin",
+        name: "app.signin",
         components: {
-          default: Login,
+          default: SignIn,
         },
       },
       {
