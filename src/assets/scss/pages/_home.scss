@@ -115,3 +115,18 @@
     line-height: 1.5;
   }
 }
+
+.hme-signup {
+  padding: 10rem 0;
+
+  &__heading {
+    text-transform: uppercase;
+    color: $color-primary;
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    line-height: 1.5;
+    font-size: $font-default-size;
+  }
+}

@@ -91,12 +91,101 @@
         </div>
       </div>
     </section>
+    <section class="hme-signup" id="get-started">
+      <div class="container">
+        <base-card class="card--primary">
+          <template v-slot:body>
+            <div class="row row--gutter">
+              <div class="col-6 col-sm-12">
+                <h2 class="heading-two hme-signup__heading">Get Started</h2>
+                <p class="hme-signup__text">
+                  Give your group a name to get started and add all participants
+                  & budget in the next easy steps.
+                </p>
+              </div>
+              <div class="col-6 col-sm-12">
+                <validation-observer slim v-slot="{ handleSubmit }">
+                  <form
+                    @submit.prevent="handleSubmit(onSignupSubmit)"
+                    class="form hme-signup__form"
+                  >
+                    <div class="row row--gutter">
+                      <div class="col-6 col-sm-12">
+                        <base-input
+                          type="text"
+                          name="group"
+                          placeholder="Group name"
+                          :rules="forms.sign_up.rules.group"
+                          v-model="forms.sign_up.fields.group"
+                        ></base-input>
+                      </div>
+                      <div class="col-6 col-sm-12">
+                        <base-input
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          :rules="forms.sign_up.rules.email"
+                          v-model="forms.sign_up.fields.email"
+                        ></base-input>
+                      </div>
+                      <div class="col-12">
+                        <base-input
+                          type="password"
+                          name="password"
+                          placeholder="Password"
+                          :rules="forms.sign_up.rules.password"
+                          v-model="forms.sign_up.fields.password"
+                        ></base-input>
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn--primary form__submit-btn"
+                    >
+                      Start your secret santa&nbsp;<i
+                        class="bi bi-chevron-double-right"
+                      ></i>
+                    </button>
+                  </form>
+                </validation-observer>
+              </div>
+            </div>
+          </template>
+        </base-card>
+      </div>
+    </section>
   </main>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import BaseCard from "@/components/BaseCard.vue";
+import BaseInput from "@/components/BaseInput.vue";
 
-@Component
-export default class Home extends Vue {}
+@Component({
+  components: {
+    BaseCard,
+    BaseInput,
+  },
+})
+export default class Home extends Vue {
+  public forms = {
+    sign_up: {
+      fields: {
+        group: "",
+        email: "",
+        password: "",
+      },
+      rules: {
+        group: { required: true, min: 3 },
+        email: { required: true, email: true },
+        password: { required: true, min: 6, max: 255 },
+      },
+    },
+  };
+
+  public onSignupSubmit(): void {
+    this.$router.push({ name: "app.login" });
+  }
+}
 </script>
