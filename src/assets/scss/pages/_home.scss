@@ -11,7 +11,9 @@
     position: absolute;
     display: inline-block;
     background-image: url(../images/svg/mataura.svg);
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
   }
 
   .container {
