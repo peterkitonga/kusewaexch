@@ -1,12 +1,97 @@
-#nav {
-  padding: 3rem;
-}
+.navbar {
+  width: 100%;
+  height: $navbar-height;
+  display: inline-block;
+  background-color: transparent;
+  position: relative;
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  .container {
+    display: flex;
+    align-items: center;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+  &__brand {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  &__brand-logo {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+  }
+
+  &__toggle {
+    margin-right: 0;
+    margin-left: auto;
+    font-size: 4.8rem;
+    display: none;
+
+    @include respond-to('xsmall') {
+      display: block;
+    }
+  }
+
+  &__list {
+    height: 100%;
+    list-style: none;
+    transition: all .3s ease-in-out;
+
+    @include respond-to('xsmall') {
+      left: 0;
+      position: absolute;
+      bottom: -$navbar-height;
+      background-color: $color-primary-50pc;
+      display: none;
+      width: 100%;
+    }
+
+    &--right {
+      margin-right: 0;
+      margin-left: auto;
+
+      @include respond-to('xsmall') {
+        margin: 0;
+      }
+    }
+
+    &--toggled {
+      display: block;
+    }
+  }
+
+  &__list-item {
+    display: inline-block;
+    vertical-align: middle;
+
+    @include respond-to('xsmall') {
+      display: block;
+    }
+  }
+
+  &__link {
+    height: 100%;
+    font-weight: 500;
+    font-size: $font-default-size;
+    color: $color-default;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    line-height: $navbar-height;
+    display: inline-block;
+    padding: 0 0.75rem;
+
+    @include respond-to('xsmall') {
+      padding: 0 2rem;
+      color: $color-primary;
+    }
+
+    &--active,
+    &:hover {
+      color: $color-secondary;
+      text-decoration: underline;
+    }
+  }
 }
