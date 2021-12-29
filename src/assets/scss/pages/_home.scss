@@ -1,0 +1,70 @@
+.hme-hero {
+  position: relative;
+  padding: 10rem 0;
+
+  &::before {
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    content: "";
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    background-image: url(../images/svg/mataura.svg);
+    background-position: center;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap-reverse;
+  }
+
+  &__card {
+    height: auto;
+    width: 44%;
+    padding: 4rem 6rem;
+    display: inline-block;
+    background-color: rgba($color-gray4pc, 0.7);
+    border-radius: 0.6rem;
+
+    @include respond-to("small") {
+      width: 80%;
+    }
+
+    @include respond-to("xsmall") {
+      width: 100%;
+    }
+  }
+
+  &__card-title {
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+  }
+
+  &__card-text {
+    line-height: 1.5;
+    font-size: $font-default-size;
+    margin-bottom: 3rem;
+  }
+
+  &__img {
+    width: 55rem;
+    height: 55rem;
+    display: inline-block;
+    clip-path: circle(50%);
+    object-fit: cover;
+
+    @include respond-to("medium") {
+      width: 50rem;
+      height: 50rem;
+    }
+    
+    @include respond-to("small") {
+      clip-path: none;
+      border-radius: 0.6rem;
+      margin-bottom: 4rem;
+    }
+  }
+}
