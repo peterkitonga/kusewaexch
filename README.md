@@ -1,5 +1,6 @@
 <div align="center">
 <h1>Kusewa Exch</h1>
+<a href="https://app.travis-ci.com/github/peterkitonga/kusewaexch" target="_blank"><img alt="Build Status" src="https://img.shields.io/travis/com/peterkitonga/kusewaexch/master?style=for-the-badge"></a> <a href="https://coveralls.io/github/peterkitonga/kusewaexch" target="_blank"><img alt="Coverage Status" src="https://img.shields.io/coveralls/github/peterkitonga/kusewaexch/master?style=for-the-badge"></a>
 <p>This project was created as a platform for drawing names for my family's secret santa gift exchange.</p>
 </div>
 
