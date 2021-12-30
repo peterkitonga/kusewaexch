@@ -60,8 +60,12 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
+import { namespace } from "vuex-class";
+
 import BaseCard from "@/components/BaseCard.vue";
 import BaseInput from "@/components/BaseInput.vue";
+
+const Auth = namespace("auth");
 
 @Component({
   components: {
@@ -70,6 +74,9 @@ import BaseInput from "@/components/BaseInput.vue";
   },
 })
 export default class SignIn extends Vue {
+  @Auth.Action
+  public initSignInUser!: () => void;
+
   public forms = {
     signin: {
       fields: {
@@ -78,7 +85,6 @@ export default class SignIn extends Vue {
         password: "password",
       },
       rules: {
-        group: { required: true, min: 3 },
         email: { required: true, email: true },
         password: { required: true, min: 6, max: 255 },
       },
@@ -86,7 +92,11 @@ export default class SignIn extends Vue {
   };
 
   public onSigninSubmit(): void {
-    this.$router.push({ name: "app.dashboard" });
+    this.initSignInUser();
+  }
+
+  mounted(): void {
+    //
   }
 }
 </script>
