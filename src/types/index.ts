@@ -27,3 +27,8 @@ export interface RandomUser {
     large: string;
   };
 }
+
+export interface TableHeadItem {
+  name: string;
+  field: string;
+}
