@@ -1,0 +1,33 @@
+.pagination {
+  display: inline-block;
+
+  &__btn {
+    color: $color-primary;
+    padding: 0.8rem 1.6rem;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    border: 1px solid $color-primary;
+    background-color: $color-base;
+    font-size: $font-default-size;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-primary-10pc;
+      box-shadow: $shadow-primary;
+      color: $color-base;
+    }
+
+    &--active {
+      background-color: $color-primary;
+      color: $color-base;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    @include respond-to("xsmall") {
+      margin-bottom: 2rem;
+    }
+  }
+}
