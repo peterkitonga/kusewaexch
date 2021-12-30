@@ -4,3 +4,26 @@ export interface InputValidationRule {
   min?: number;
   max?: number;
 }
+
+export interface RandomUser {
+  name: {
+    first: string;
+    last: string;
+  };
+  email: string;
+  gender: string;
+  location: {
+    city: string;
+    country: string;
+  };
+  dob: {
+    age: number;
+  };
+  registered: {
+    age: number;
+  };
+  phone: string;
+  picture: {
+    large: string;
+  };
+}
