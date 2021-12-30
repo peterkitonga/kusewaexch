@@ -40,6 +40,7 @@
                     name="password"
                     placeholder="Password"
                     :rules="forms.signin.rules.password"
+                    :input-value="forms.signin.fields.password"
                     v-model="forms.signin.fields.password"
                   ></base-input>
                   <button

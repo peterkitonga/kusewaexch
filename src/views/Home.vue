@@ -116,6 +116,7 @@
                           name="group"
                           placeholder="Group name"
                           :rules="forms.sign_up.rules.group"
+                          :input-value="forms.sign_up.fields.group"
                           v-model="forms.sign_up.fields.group"
                         ></base-input>
                       </div>
@@ -125,6 +126,7 @@
                           name="email"
                           placeholder="Email"
                           :rules="forms.sign_up.rules.email"
+                          :input-value="forms.sign_up.fields.email"
                           v-model="forms.sign_up.fields.email"
                         ></base-input>
                       </div>
@@ -134,6 +136,7 @@
                           name="password"
                           placeholder="Password"
                           :rules="forms.sign_up.rules.password"
+                          :input-value="forms.sign_up.fields.password"
                           v-model="forms.sign_up.fields.password"
                         ></base-input>
                       </div>
