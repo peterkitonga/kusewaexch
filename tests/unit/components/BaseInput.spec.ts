@@ -21,7 +21,7 @@ describe("BaseInput.vue", () => {
           type: "text",
           rules: { required: true },
           placeholder: "First Name",
-          value: "Peter",
+          inputValue: "Peter",
         },
         stubs: {
           "validation-provider": ValidationProvider,
@@ -45,7 +45,7 @@ describe("BaseInput.vue", () => {
           type: "text",
           rules: { required: true },
           placeholder: "First Name",
-          value: "Peter",
+          inputValue: "Peter",
         },
         stubs: {
           "validation-provider": ValidationProvider,
