@@ -21,6 +21,15 @@
     }
   }
 
+  &--transparent {
+    color: $color-default;
+    background-color: inherit;
+
+    &:hover {
+      box-shadow: $shadow-primary;
+    }
+  }
+
   &--primary {
     color: $color-base;
     background-color: $color-primary;
