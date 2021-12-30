@@ -27,3 +27,23 @@ export interface RandomUser {
     large: string;
   };
 }
+
+export interface TableHeadItem {
+  name: string;
+  field: string;
+}
+
+export interface RandomUserParams {
+  format: string;
+  page: number;
+  results: number;
+  seed: string;
+  gender: string;
+  inc: string;
+  dl: unknown;
+}
+
+export interface RandomUserInfo {
+  page: number;
+  results: number;
+}
