@@ -14,6 +14,14 @@
   text-align: center !important;
 }
 
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-bold {
+  font-weight: 700 !important;
+}
+
 .mt-10 {
   margin-top: 1rem !important;
 }
@@ -92,4 +100,25 @@
 
 .ml-40 {
   margin-left: 4rem !important;
+}
+
+.d-flex {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.d-order {
+  &--sm-1 {
+    @include respond-to('small') {
+      order: 1 !important;
+    }
+  }
+
+  &--sm-2 {
+    @include respond-to('small') {
+      order: 2 !important;
+    }
+  }
 }

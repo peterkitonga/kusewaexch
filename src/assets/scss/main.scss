@@ -12,5 +12,13 @@
 @import "layout/navigation";
 
 @import "components/buttons";
+@import "components/card";
+@import "components/dropdown";
+@import "components/form";
+@import "components/pagination";
+@import "components/table";
+@import "components/timer";
 
+@import "pages/dashboard";
 @import "pages/home";
+@import "pages/signin";

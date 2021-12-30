@@ -1,0 +1,66 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    position: relative;
+    padding: 1.4rem 4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $font-default-size;
+    transition: all 0.2s ease;
+    display: inline-block;
+    border-radius: 0.4rem;
+    font-weight: 500;
+
+    // for <button> element
+    cursor: pointer;
+    border: none;
+
+    @include respond-to("medium") {
+      line-height: 1.5;
+    }
+  }
+
+  &--transparent {
+    color: $color-default;
+    background-color: inherit;
+
+    &:hover {
+      box-shadow: $shadow-primary;
+    }
+  }
+
+  &--primary {
+    color: $color-base;
+    background-color: $color-primary;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: $color-primary-10pc;
+      box-shadow: $shadow-primary;
+    }
+
+    &:active {
+      transform: translateY(1px);
+      background-color: lighten($color-primary, 5%);
+    }
+  }
+
+  &--outline-primary {
+    color: $color-primary;
+    background-color: $color-base;
+    border: 1px solid $color-primary;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $color-base;
+      background-color: $color-primary-10pc;
+      box-shadow: $shadow-primary;
+    }
+
+    &:active {
+      transform: translateY(1px);
+      background-color: lighten($color-primary, 5%);
+    }
+  }
+}

@@ -8,8 +8,10 @@ import AppFooter from "../layouts/TheFooter.vue";
 
 // App Views
 import Home from "../views/Home.vue";
-import Login from "../views/Login.vue";
+import SignIn from "../views/SignIn.vue";
 import Dashboard from "../views/Dashboard.vue";
+
+import store from "@/store";
 
 Vue.use(VueRouter);
 
@@ -26,13 +28,22 @@ const routes: Array<RouteConfig> = [
           default: Home,
           footer: AppFooter,
         },
+        meta: { auth: false },
+        beforeEnter: (to, from, next) => {
+          if (store.getters["auth/authenticationStatus"] && from.meta?.auth) {
+            next({ name: `app.dashboard` });
+          } else {
+            next();
+          }
+        },
       },
       {
-        path: "/login",
-        name: "app.login",
+        path: "/signin",
+        name: "app.signin",
         components: {
-          default: Login,
+          default: SignIn,
         },
+        meta: { auth: false },
       },
       {
         path: "/home",
@@ -43,6 +54,7 @@ const routes: Array<RouteConfig> = [
           default: Dashboard,
           footer: AppFooter,
         },
+        meta: { auth: true },
       },
     ],
   },

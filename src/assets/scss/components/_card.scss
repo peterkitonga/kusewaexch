@@ -1,0 +1,33 @@
+.card {
+  background-color: $color-base;
+  font-size: $font-default-size;
+  box-shadow: $shadow-primary;
+  border-radius: 0.6rem;
+
+  &__header {
+    font-weight: 500;
+    background-color: $color-gray4pc;
+
+    & > * {
+      padding: 1.5rem 4rem;
+    }
+  }
+
+  &__body {
+    line-height: 1.5;
+    padding: 4rem 6rem;
+  }
+
+  &__footer {
+    font-weight: 500;
+    background-color: $color-gray4pc;
+
+    & > * {
+      padding: 1.5rem 4rem;
+    }
+  }
+
+  &--primary {
+    background-color: $color-primary-40pc;
+  }
+}

@@ -1,0 +1,13 @@
+.footer {
+  background-color: $color-primary-20pc;
+  padding: 2.2rem 0;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__content-heading {
+    color: $color-primary-40pc;
+    margin: 0;
+  }
+}
