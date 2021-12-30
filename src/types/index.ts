@@ -34,13 +34,13 @@ export interface TableHeadItem {
 }
 
 export interface RandomUserParams {
-  format: string;
+  format?: string;
   page: number;
   results: number;
   seed: string;
-  gender: string;
-  inc: string;
-  dl: unknown;
+  gender?: string;
+  inc?: string;
+  dl?: unknown;
 }
 
 export interface RandomUserInfo {
