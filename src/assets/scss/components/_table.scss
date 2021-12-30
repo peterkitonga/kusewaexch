@@ -1,0 +1,61 @@
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  font-size: $font-default-size;
+  border-collapse: collapse;
+  white-space: nowrap;
+  // position: relative;
+  border: none;
+
+  &__caption {
+    display: none;
+    text-align: left;
+    font-size: $font-small-size;
+    color: $color-muted;
+
+    &--shown {
+      left: 50%;
+      display: block;
+      padding: 1rem 0;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+  }
+
+  td,
+  th {
+    text-align: left;
+    padding: 2rem 0;
+  }
+
+  thead {
+    tr {
+      border-bottom: 1px solid $color-gray4pc;
+    }
+
+    th {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+
+  @include respond-to("small") {
+    &__caption {
+      display: block;
+      padding: 1rem 0;
+    }
+  }
+
+  @include respond-to("medium") {
+    td,
+    th {
+      &:not(:last-child) {
+        padding-right: 2rem;
+      }
+    }
+  }
+}
