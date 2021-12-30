@@ -19,6 +19,12 @@ class AuthModule extends VuexModule {
     this.context.commit("setAuthenticationStatus", true);
     router.push({ name: "app.dashboard" });
   }
+
+  @Action({ rawError: true })
+  public initLogoutUser(): void {
+    this.context.commit("setAuthenticationStatus", false);
+    router.push({ name: "app.home" });
+  }
 }
 
 export default AuthModule;

@@ -37,7 +37,7 @@ export interface RandomUserParams {
   format?: string;
   page: number;
   results: number;
-  seed: string;
+  seed?: string;
   gender?: string;
   inc?: string;
   dl?: unknown;
@@ -46,4 +46,8 @@ export interface RandomUserParams {
 export interface RandomUserInfo {
   page: number;
   results: number;
+}
+
+export interface DynamicFields {
+  [key: string]: unknown;
 }

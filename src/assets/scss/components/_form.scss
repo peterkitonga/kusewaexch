@@ -56,6 +56,13 @@
       font-size: $font-default-size;
     }
 
+    &[type="checkbox"] {
+      width: auto;
+      cursor: pointer;
+      min-width: auto;
+      margin-right: 1rem;
+    }
+
     &--valid {
       outline: 1px solid $color-secondary-30pc;
     }
@@ -63,6 +70,11 @@
     &--invalid {
       outline: 1px solid $color-primary-30pc;
     }
+
+  }
+
+  &__field-label {
+    display: inline-block;
   }
 
   &__field-help {
