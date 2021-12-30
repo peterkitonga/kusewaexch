@@ -38,6 +38,30 @@ class UserModule extends VuexModule {
       Promise.reject(error);
     }
   }
+
+  @Action({ rawError: true })
+  public async initExportUsers(params: RandomUserParams): Promise<void> {
+    try {
+      const urlParams = `?seed=${params.seed}&page=${params.page}&results=${params.results}&inc=${params.inc}&format=csv&dl`;
+
+      const exportData = await apiRequest.get(`/${urlParams}`);
+      const fileBlob = new Blob([exportData.data], { type: "text/csv" });
+      const objectUrl = window.URL.createObjectURL(fileBlob);
+      const link = document.createElement("a");
+
+      link.href = objectUrl;
+      link.style.display = "none";
+      link.download = `kxch-${Date.now()}.csv`;
+
+      document.body.appendChild(link);
+      link.click();
+
+      window.URL.revokeObjectURL(objectUrl);
+      link.remove();
+    } catch (error) {
+      Promise.reject(error);
+    }
+  }
 }
 
 export default UserModule;
